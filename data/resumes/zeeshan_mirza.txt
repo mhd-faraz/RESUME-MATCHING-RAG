@@ -1,0 +1,49 @@
+ZEESHAN MIRZA
+| 9912345678 | zeeshanmirza.tech@gmail.com |
+
+EDUCATION
+AMITY UNIVERSITY
+B.TECH IN COMPUTER SCIENCE ENGINEERING
+Expected June 2023 | CGPI : 8.31
+
+KENDRIYA VIDYALAYA | (CBSE)
+Grad. 2019 | Percentage XII : 79.8
+
+KENDRIYA VIDYALAYA | (CBSE)
+Grad. 2017 | X CGPA : 8.8
+
+PROJECTS
+
+EXPENSE TRACKER APP
+A personal finance management web app built using React and Node.js.
+Allows users to add, categorize and visualize their daily expenses.
+Features include monthly reports, chart visualizations using Chart.js,
+and export to PDF. Data stored in MongoDB.
+
+PORTFOLIO WEBSITE
+A personal portfolio website built with React and Tailwind CSS.
+Fully responsive design with smooth animations using Framer Motion.
+Deployed on Netlify with custom domain.
+
+ANDROID NOTES APP
+A simple Android notes application built using Java and Android Studio.
+Features include create, edit, delete notes, search functionality,
+and local storage using SQLite database.
+
+COURSEWORK
+Object Oriented Concepts using JAVA
+Data Structures and Algorithms
+Computer Networks
+Software Engineering
+Cloud Computing Basics
+
+SKILLS
+Languages: Java, JavaScript, Python
+Development: React, Tailwind CSS, Node.js, Express, Android Development, HTML, CSS
+Database: MongoDB, SQLite, MySQL
+General: Data Structures, Algorithms, OOPs
+Others: Git, GitHub, Android Studio, Postman
+
+LINKS
+zeeshanM - LeetCode Profile
+zeeshan-mirza (github.com)

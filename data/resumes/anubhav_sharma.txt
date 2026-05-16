@@ -1,0 +1,50 @@
+ANUBHAV SHARMA
+| 9756432180 | anubhavsharma.dev@gmail.com |
+
+EDUCATION
+VIT UNIVERSITY
+B.TECH IN COMPUTER SCIENCE ENGINEERING
+Expected June 2023 | CGPI : 9.05
+
+DELHI PUBLIC SCHOOL | (CBSE)
+Grad. 2019 | Percentage XII : 91.2
+
+DELHI PUBLIC SCHOOL | (CBSE)
+Grad. 2017 | X CGPA : 9.8
+
+PROJECTS
+
+JOB PORTAL WEB APP
+A full-stack job portal where companies can post jobs and candidates can apply.
+Built with React and TypeScript on the frontend.
+Backend developed using Node.js, Express and MongoDB.
+Features include role-based authentication (admin, recruiter, candidate),
+resume upload, application tracking and email notifications.
+
+WEATHER APP
+A weather forecast application using React and OpenWeatherMap API.
+Displays current weather, 7-day forecast and hourly breakdown.
+Features location-based detection and search by city name.
+Fully responsive UI built with CSS modules.
+
+UNDERGRADUATE RESEARCH
+Mini project on Sentiment Analysis using Python and NLP libraries.
+Used NLTK and scikit-learn for text classification on Twitter data.
+
+COURSEWORK
+Object Oriented Concepts using JAVA
+Design and Analysis of Algorithms
+Artificial Intelligence and Machine Learning
+Full Stack Web Development
+Cloud Computing
+
+SKILLS
+Languages: Java, JavaScript, TypeScript, Python
+Development: React, TypeScript, Node.js, Express, REST APIs, HTML5, CSS3
+Database: MongoDB, PostgreSQL, Firebase
+General: Data Structures, Algorithms, OOPs, Machine Learning Basics
+Others: Git, GitHub, Docker (basics), AWS (basics), Postman
+
+LINKS
+anubhavS - LeetCode Profile
+anubhav-sharma (github.com)

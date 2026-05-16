@@ -1,0 +1,46 @@
+FAIZ UR RAHMAN
+| 9823456710 | faizurrahman.cse@gmail.com |
+
+EDUCATION
+ALIGARH MUSLIM UNIVERSITY
+B.TECH IN COMPUTER SCIENCE ENGINEERING
+Expected June 2023 | CGPI : 8.72
+
+ST. JOSEPH SCHOOL | (CBSE)
+Grad. 2019 | Percentage XII : 87.4
+
+ST. JOSEPH SCHOOL | (CBSE)
+Grad. 2017 | X CGPA : 9.6
+
+PROJECTS
+
+STUDY PLANNER WEB APP
+A productivity web app for students to manage their study schedule.
+Built with React on the frontend and Firebase as the backend.
+Features include task creation, deadline tracking, progress charts,
+and email reminders using NodeMailer.
+Deployed on Vercel.
+
+QUIZ PLATFORM
+An online quiz platform supporting multiple categories and difficulty levels.
+Frontend built in React with dynamic question rendering.
+Backend built with Node.js and Express, with questions stored in MongoDB.
+Includes timer, scoring system, and leaderboard.
+
+COURSEWORK
+Object Oriented Programming using Java
+Design and Analysis of Algorithms
+Web Development
+Operating Systems
+Artificial Intelligence
+
+SKILLS
+Languages: Java, JavaScript, TypeScript
+Development: React, Redux, Node.js, Express, HTML5, CSS3, Full Stack
+Database: MongoDB, Firebase, PostgreSQL
+General: Data Structures, Algorithms, OOPs with Java
+Others: Git, GitHub, Figma, REST APIs
+
+LINKS
+faizRahman - LeetCode Profile
+faiz-rahman (github.com)
