@@ -10,39 +10,29 @@
 **Score:** 80/100
 **Recommendation:** 🤔 MAYBE
 
-**Reasoning:** The candidate has a strong background in AI, ML, and deep learning, with experience in building production-grade agentic AI systems and RAG pipelines. However, they lack experience in program leadership, governance, change enablement, and some technical skills like REST API development, NoSQL database design, and RDBMS design. They also have less than the required 2 years of experience.
+**Reasoning:** The candidate has a strong background in AI and ML, with experience in building production-grade AI systems. However, they lack experience with TensorFlow and have less than 2 years of experience.
 
 **✅ Strengths:**
-- AI
-- ML
-- deep learning
-- NLP
+- Machine Learning
+- Deep Learning
 - Python
-- production-grade agentic AI systems
-- RAG pipelines
-- microservices
+- NLP
+- production-grade AI systems
 
 **⚠️ Gaps:**
-- program leadership
-- governance
-- change enablement
-- REST API development
-- NoSQL database design
-- RDBMS design
 - TensorFlow
-- experience
+- 2+ years of experience
 
 ## Interview Questions for Anubhav Full Resume
 
 ### Technical Questions:
-- Can you describe your experience with AI?
-- Can you describe your experience with ML?
-- Can you describe your experience with deep learning?
+- Can you describe your experience with Machine Learning?
+- Can you describe your experience with Deep Learning?
+- Can you describe your experience with Python?
 
 ### Gap-Bridging Questions:
-- You appear to have limited experience with program leadership. How would you approach learning it?
-- You appear to have limited experience with governance. How would you approach learning it?
-- You appear to have limited experience with change enablement. How would you approach learning it?
+- You appear to have limited experience with TensorFlow. How would you approach learning it?
+- You appear to have limited experience with 2+ years of experience. How would you approach learning it?
 
 ### General Questions:
 - Describe your most complex project.
@@ -54,37 +44,32 @@
 **Score:** 40/100
 **Recommendation:** ❌ NO-HIRE
 
-**Reasoning:** The candidate lacks most of the must-have skills and experience, but has some relevant skills in front-end development and REST API integration.
+**Reasoning:** The candidate lacks experience in key areas such as Machine Learning, Deep Learning, NLP, and TensorFlow. Although they have a strong foundation in Data Structures and Algorithms and are proficient in Python, their experience is mostly in front-end development.
 
 **✅ Strengths:**
-- front-end development
-- REST API integration
-- UI/UX enhancements
+- Python
+- strong foundation in Data Structures and Algorithms
+- experience with front-end development
 
 **⚠️ Gaps:**
-- AI
-- ML
-- deep learning
+- Machine Learning
+- Deep Learning
 - NLP
 - TensorFlow
-- program leadership
-- governance
-- change enablement
-- NoSQL database design
-- RDBMS design
-- experience
+- experience in Cloud Environments
+- less than 2 years of experience
 
 ## Interview Questions for Cv Mhd Faraz (6)
 
 ### Technical Questions:
-- Can you describe your experience with AI?
-- Can you describe your experience with ML?
-- Can you describe your experience with deep learning?
+- Can you describe your experience with Machine Learning?
+- Can you describe your experience with Deep Learning?
+- Can you describe your experience with Python?
 
 ### Gap-Bridging Questions:
-- You appear to have limited experience with AI. How would you approach learning it?
-- You appear to have limited experience with ML. How would you approach learning it?
-- You appear to have limited experience with deep learning. How would you approach learning it?
+- You appear to have limited experience with Machine Learning. How would you approach learning it?
+- You appear to have limited experience with Deep Learning. How would you approach learning it?
+- You appear to have limited experience with NLP. How would you approach learning it?
 
 ### General Questions:
 - Describe your most complex project.
