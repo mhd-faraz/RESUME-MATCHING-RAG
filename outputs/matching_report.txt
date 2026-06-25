@@ -1,140 +1,93 @@
 # 🤖 Candidate Matching Report
-**Role:** Full Stack Developer
+**Role:** Artificial Intelligence Engineer
 **Screening Round:** 1
-**Total Reviewed:** 5
-**Shortlisted:** 5
+**Total Reviewed:** 2
+**Shortlisted:** 2
 
 ---
 
-## 1. Anubhav Sharma
-**Score:** 92/100
-**Recommendation:** ✅ HIRE
-
-**Reasoning:** The candidate has a strong foundation in the required technologies and has demonstrated experience with Nice to Have technologies. However, they lack professional experience, which is a concern.
-
-**✅ Strengths:**
-- Strong proficiency in required technologies like React.js, JavaScript, Node.js, REST APIs, and Git
-- Experience with Nice to Have technologies like TypeScript, MongoDB, and AWS
-- Diverse project portfolio showcasing full-stack development skills
-
-**⚠️ Gaps:**
-- Limited professional experience, with only undergraduate research and projects listed
-
-## Interview Questions for Anubhav Sharma
-
-### Technical Questions:
-- Can you describe your experience with React.js?
-- Can you describe your experience with JavaScript?
-- Can you describe your experience with Node.js?
-
-### Gap-Bridging Questions:
-- You appear to have limited experience with Limited professional experience, with only undergraduate research and projects listed. How would you approach learning it?
-
-### General Questions:
-- Describe your most complex project.
-- How do you handle tight deadlines?
-
----
-
-## 2. Faiz Rahman
-**Score:** 90/100
-**Recommendation:** ✅ HIRE
-
-**Reasoning:** The candidate has a strong foundation in the required technologies, including React.js, JavaScript, Node.js, REST APIs, and Git. They also have experience with MongoDB and TypeScript, which are nice to have skills. However, they lack experience with AWS and Android Development, and do not mention Python. Despite being a recent graduate, their projects demonstrate a good understanding of full-stack development and problem-solving skills.
-
-**✅ Strengths:**
-- Strong proficiency in React.js, JavaScript, and Node.js
-- Experience with REST APIs and Git
-- Familiarity with MongoDB and TypeScript
-
-**⚠️ Gaps:**
-- Limited experience with AWS and Android Development
-- No mention of Python experience
-
-## Interview Questions for Faiz Rahman
-
-### Technical Questions:
-- Can you describe your experience with React.js?
-- Can you describe your experience with JavaScript?
-- Can you describe your experience with Node.js?
-
-### Gap-Bridging Questions:
-- You appear to have limited experience with Limited experience with AWS and Android Development. How would you approach learning it?
-- You appear to have limited experience with No mention of Python experience. How would you approach learning it?
-
-### General Questions:
-- Describe your most complex project.
-- How do you handle tight deadlines?
-
----
-
-## 3. Asad Khan
-**Score:** 90/100
-**Recommendation:** ✅ HIRE
-
-**Reasoning:** The candidate has a strong foundation in required skills like React.js, Node.js, JavaScript, REST APIs, and Git. They also have experience with MongoDB, which is a nice-to-have skill. However, they lack experience in TypeScript, AWS, and Android Development. The candidate's projects demonstrate their ability to build full-stack applications and work with databases.
-
-**✅ Strengths:**
-- React.js
-- Node.js
-- JavaScript
-- REST APIs
-- Git
-- MongoDB
-
-**⚠️ Gaps:**
-- TypeScript
-- AWS
-- Android Development
-
-## Interview Questions for Asad Khan
-
-### Technical Questions:
-- Can you describe your experience with React.js?
-- Can you describe your experience with JavaScript?
-- Can you describe your experience with Node.js?
-
-### Gap-Bridging Questions:
-- You appear to have limited experience with TypeScript. How would you approach learning it?
-- You appear to have limited experience with AWS. How would you approach learning it?
-- You appear to have limited experience with Android Development. How would you approach learning it?
-
-### General Questions:
-- Describe your most complex project.
-- How do you handle tight deadlines?
-
----
-
-## 4. Zeeshan Mirza
-**Score:** 90/100
+## 1. Anubhav Full Resume
+**Score:** 80/100
 **Recommendation:** 🤔 MAYBE
 
-**Reasoning:** The candidate has a strong foundation in required skills like React.js, Node.js, and JavaScript, and has experience with MongoDB and Git. However, they lack experience with REST APIs and do not mention TypeScript or AWS. They also have less than the required 2 years of experience.
+**Reasoning:** The candidate has a strong background in AI, ML, and deep learning, with experience in building production-grade agentic AI systems and RAG pipelines. However, they lack experience in program leadership, governance, change enablement, and some technical skills like REST API development, NoSQL database design, and RDBMS design. They also have less than the required 2 years of experience.
 
 **✅ Strengths:**
-- Strong proficiency in React.js, Node.js, and JavaScript
-- Experience with MongoDB and Git
+- AI
+- ML
+- deep learning
+- NLP
+- Python
+- production-grade agentic AI systems
+- RAG pipelines
+- microservices
 
 **⚠️ Gaps:**
-- Limited experience with REST APIs, no mention of TypeScript or AWS
+- program leadership
+- governance
+- change enablement
+- REST API development
+- NoSQL database design
+- RDBMS design
+- TensorFlow
+- experience
+
+## Interview Questions for Anubhav Full Resume
+
+### Technical Questions:
+- Can you describe your experience with AI?
+- Can you describe your experience with ML?
+- Can you describe your experience with deep learning?
+
+### Gap-Bridging Questions:
+- You appear to have limited experience with program leadership. How would you approach learning it?
+- You appear to have limited experience with governance. How would you approach learning it?
+- You appear to have limited experience with change enablement. How would you approach learning it?
+
+### General Questions:
+- Describe your most complex project.
+- How do you handle tight deadlines?
 
 ---
 
-## 5. Faraz Resume (3)
-**Score:** 60/100
-**Recommendation:** 🤔 MAYBE
+## 2. Cv Mhd Faraz (6)
+**Score:** 40/100
+**Recommendation:** ❌ NO-HIRE
 
-**Reasoning:** The candidate has some relevant skills, but lacks experience with REST APIs and has less than 2 years of experience.
+**Reasoning:** The candidate lacks most of the must-have skills and experience, but has some relevant skills in front-end development and REST API integration.
 
 **✅ Strengths:**
-- React.js
-- JavaScript
-- Node.js
-- Android Development
-- Git
+- front-end development
+- REST API integration
+- UI/UX enhancements
 
 **⚠️ Gaps:**
-- REST APIs
-- 2 years of experience
+- AI
+- ML
+- deep learning
+- NLP
+- TensorFlow
+- program leadership
+- governance
+- change enablement
+- NoSQL database design
+- RDBMS design
+- experience
+
+## Interview Questions for Cv Mhd Faraz (6)
+
+### Technical Questions:
+- Can you describe your experience with AI?
+- Can you describe your experience with ML?
+- Can you describe your experience with deep learning?
+
+### Gap-Bridging Questions:
+- You appear to have limited experience with AI. How would you approach learning it?
+- You appear to have limited experience with ML. How would you approach learning it?
+- You appear to have limited experience with deep learning. How would you approach learning it?
+
+### General Questions:
+- Describe your most complex project.
+- How do you handle tight deadlines?
 
 ---

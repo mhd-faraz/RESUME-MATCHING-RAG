@@ -1,7 +1,9 @@
 import streamlit as st
 import os
+import shutil
 from dotenv import load_dotenv
-from matching_agent import agent
+from matching_agent import agent, llm
+from langchain_core.messages import HumanMessage
 from tools import compare_candidates, list_resumes, list_job_descriptions, generate_interview_questions
 from rag_search import index_all_resumes, search_resumes
 
@@ -54,11 +56,27 @@ with st.sidebar:
     st.subheader("📊 Status")
     st.metric("Resumes Found", len(list_resumes()))
     st.metric("Job Descriptions Found", len(list_job_descriptions()))
-    if st.button("🗑️ Clear Chat"):
-        st.session_state.messages = []
-        st.session_state.agent_state = None
-        st.session_state.report = ""
-        st.rerun()
+
+    col_a, col_b = st.columns(2)
+    with col_a:
+        if st.button("🗑️ Clear Chat"):
+            st.session_state.messages = []
+            st.session_state.agent_state = None
+            st.session_state.report = ""
+            st.rerun()
+    with col_b:
+        if st.button("🧹 Clear All Data"):
+            for folder in ["data/resumes", "data/job_descriptions", "chroma_db"]:
+                if os.path.exists(folder):
+                    shutil.rmtree(folder)
+            os.makedirs("data/resumes", exist_ok=True)
+            os.makedirs("data/job_descriptions", exist_ok=True)
+            st.session_state.messages = []
+            st.session_state.agent_state = None
+            st.session_state.report = ""
+            st.session_state.jd_text = ""
+            st.success("✅ All old resumes, JDs & index cleared!")
+            st.rerun()
 
 # ── JD TEXT AREA ──
 st.subheader("📋 Job Description")
@@ -222,16 +240,34 @@ if prompt := st.chat_input("Ask: 'Who is best candidate?' or 'Why did Anubhav ra
             reply = "No candidates found. Please index resumes first."
 
     else:
-        reply = (
-            "I can answer these questions:\n\n"
-            "- 🏆 **'Who is the best candidate?'**\n"
-            "- ❓ **'Why did Anubhav rank higher?'**\n"
-            "- 📊 **'Compare top 3 candidates'**\n"
-            "- 🎤 **'Generate interview questions'**\n"
-            "- 📄 **'Show me the report'**\n"
-            "- 🔢 **'Show all scores'**\n"
-            "- 🔍 **'Find React developers'**"
-        )
+        # ── Fallback: real LLM-powered answer using candidate context ──
+        if st.session_state.agent_state:
+            candidates = st.session_state.agent_state.get("shortlisted_candidates", [])
+            if candidates:
+                context = "\n\n".join([
+                    f"{i+1}. {c.get('name')} — Score: {c.get('score',0)}/100, "
+                    f"Recommendation: {c.get('recommendation','N/A')}, "
+                    f"Strengths: {', '.join(c.get('strengths', []))}, "
+                    f"Gaps: {', '.join(c.get('gaps', []))}, "
+                    f"Reasoning: {c.get('reasoning','')}"
+                    for i, c in enumerate(candidates)
+                ])
+                llm_prompt = f"""You are an HR assistant. Answer the recruiter's question
+using ONLY the candidate data below. Be concise and specific.
+
+Candidate Data:
+{context}
+
+Question: {prompt}"""
+                try:
+                    response = llm.invoke([HumanMessage(content=llm_prompt)])
+                    reply = response.content
+                except Exception as e:
+                    reply = f"❌ Couldn't process that question: {str(e)}"
+            else:
+                reply = "No candidates ranked yet. Please click **🚀 Run Full Match** first."
+        else:
+            reply = "Please click **🚀 Run Full Match** button first."
 
     st.session_state.messages.append({"role": "assistant", "content": reply})
     st.rerun()

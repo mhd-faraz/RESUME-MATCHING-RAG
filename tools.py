@@ -61,6 +61,7 @@ def read_resume(file_path: str) -> str:
 
 def list_resumes() -> List[str]:
     """List all resume files in the resumes directory."""
+    os.makedirs(RESUME_DIR, exist_ok=True)
     supported = {".pdf", ".docx", ".txt"}
     files = []
     for f in Path(RESUME_DIR).iterdir():
@@ -71,6 +72,7 @@ def list_resumes() -> List[str]:
 
 def list_job_descriptions() -> List[str]:
     """List all JD files."""
+    os.makedirs(JD_DIR, exist_ok=True)
     supported = {".pdf", ".docx", ".txt"}
     files = []
     for f in Path(JD_DIR).iterdir():

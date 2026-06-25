@@ -107,14 +107,17 @@ def search_resumes(
     """
     collection = get_collection()
 
-    # Make sure we have data
     count = collection.count()
     if count == 0:
         index_all_resumes()
+        count = collection.count()
+
+    if count == 0:
+        return []
 
     results = collection.query(
         query_texts=[query],
-        n_results=min(top_k, collection.count())
+        n_results=min(top_k, count)
     )
 
     candidates = []
