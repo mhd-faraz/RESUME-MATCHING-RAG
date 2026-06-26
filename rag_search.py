@@ -22,10 +22,8 @@ def get_chroma_client():
 
 
 def get_embedding_function():
-    """Use sentence-transformers for embeddings (free, no API key)."""
-    return embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="all-MiniLM-L6-v2"
-    )
+    """Use default ChromaDB embeddings (no dependencies)."""
+    return embedding_functions.DefaultEmbeddingFunction()
 
 
 def get_collection():
@@ -52,44 +50,30 @@ def index_all_resumes() -> str:
         return "No resume files found in data/resumes/"
 
     indexed = 0
-    skipped = 0
 
     for file_path in resume_files:
         candidate_id = os.path.basename(file_path)
-
-        # Skip if already indexed
-        existing = collection.get(ids=[candidate_id])
-        if existing["ids"]:
-            skipped += 1
-            continue
-
-        # Read and index
         text = read_resume(file_path)
+        
         if text and not text.startswith("Error"):
-            collection.add(
-                documents=[text],
-                ids=[candidate_id],
-                metadatas=[{
-                    "file_path": file_path,
-                    "filename": candidate_id
-                }]
-            )
-            indexed += 1
+            try:
+                collection.add(
+                    documents=[text],
+                    ids=[candidate_id],
+                    metadatas=[{
+                        "file_path": file_path,
+                        "filename": candidate_id
+                    }]
+                )
+                indexed += 1
+            except Exception as e:
+                print(f"Error indexing {candidate_id}: {e}")
 
-    return (
-        f"Indexing complete. "
-        f"Indexed: {indexed}, Skipped (already exist): {skipped}, "
-        f"Total in DB: {indexed + skipped}"
-    )
+    return f"✅ Indexed {indexed} resume(s)"
 
 
 def reindex_resumes() -> str:
-    """Force re-index all resumes (clears old data)."""
-    client = get_chroma_client()
-    try:
-        client.delete_collection(COLLECTION_NAME)
-    except Exception:
-        pass
+    """Force re-index all resumes."""
     return index_all_resumes()
 
 
@@ -101,49 +85,48 @@ def search_resumes(
     query: str,
     top_k: int = 10
 ) -> List[Dict[str, Any]]:
-    """
-    Search resumes using semantic similarity.
-    Returns top_k most relevant candidates.
-    """
-    collection = get_collection()
-
-    count = collection.count()
-    if count == 0:
-        index_all_resumes()
+    """Search resumes using semantic similarity."""
+    try:
+        collection = get_collection()
         count = collection.count()
+        
+        if count == 0:
+            index_all_resumes()
+            count = collection.count()
 
-    if count == 0:
+        if count == 0:
+            return []
+
+        results = collection.query(
+            query_texts=[query],
+            n_results=min(top_k, count)
+        )
+
+        candidates = []
+        if results and results["ids"] and results["ids"][0]:
+            for i, doc_id in enumerate(results["ids"][0]):
+                candidates.append({
+                    "id": doc_id,
+                    "file_path": results["metadatas"][0][i].get("file_path", ""),
+                    "name": doc_id.replace(".txt", "")
+                                   .replace(".pdf", "")
+                                   .replace(".docx", "")
+                                   .replace("_", " ")
+                                   .title(),
+                    "raw_text": results["documents"][0][i],
+                    "similarity_score": round(1 - results["distances"][0][i], 3)
+                })
+
+        return candidates
+    except Exception as e:
+        print(f"Search error: {e}")
         return []
-
-    results = collection.query(
-        query_texts=[query],
-        n_results=min(top_k, count)
-    )
-
-    candidates = []
-    if results and results["ids"][0]:
-        for i, doc_id in enumerate(results["ids"][0]):
-            candidates.append({
-                "id": doc_id,
-                "file_path": results["metadatas"][0][i]["file_path"],
-                "name": doc_id.replace(".txt", "")
-                               .replace(".pdf", "")
-                               .replace(".docx", "")
-                               .replace("_", " ")
-                               .title(),
-                "raw_text": results["documents"][0][i],
-                "similarity_score": round(
-                    1 - results["distances"][0][i], 3
-                )
-            })
-
-    return candidates
 
 
 def search_by_skills(
     skills: List[str],
     top_k: int = 10
 ) -> List[Dict[str, Any]]:
-    """Search resumes by a list of skills."""
+    """Search resumes by skills."""
     query = "Skills and experience in: " + ", ".join(skills)
     return search_resumes(query, top_k)
