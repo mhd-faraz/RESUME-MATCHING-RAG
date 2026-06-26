@@ -6,33 +6,35 @@
 
 ---
 
-## 1. Anubhav Full Resume
-**Score:** 80/100
-**Recommendation:** 🤔 MAYBE
+## 1. Anubhav (1)
+**Score:** 90/100
+**Recommendation:** ✅ HIRE
 
-**Reasoning:** The candidate has a strong background in AI and ML, with experience in building production-grade AI systems. However, they lack experience with TensorFlow and have less than 2 years of experience.
+**Reasoning:** The candidate has a strong background in AI, Deep Learning, and NLP, with experience in building production-grade AI platforms. They also have experience with CI/CD pipelines and load testing frameworks. However, they lack experience in Computer Vision and other nice-to-have skills.
 
 **✅ Strengths:**
-- Machine Learning
+- Artificial Intelligence
 - Deep Learning
-- Python
-- NLP
-- production-grade AI systems
+- Neuro-linguistic Programming (NLP)
+- Machine Learning (ML)
+- experience with production-grade AI platforms
 
 **⚠️ Gaps:**
-- TensorFlow
-- 2+ years of experience
+- Computer Vision
+- Chatbots
+- Robotics
 
-## Interview Questions for Anubhav Full Resume
+## Interview Questions for Anubhav (1)
 
 ### Technical Questions:
-- Can you describe your experience with Machine Learning?
+- Can you describe your experience with Artificial Intelligence?
 - Can you describe your experience with Deep Learning?
-- Can you describe your experience with Python?
+- Can you describe your experience with Neuro-linguistic Programming (NLP)?
 
 ### Gap-Bridging Questions:
-- You appear to have limited experience with TensorFlow. How would you approach learning it?
-- You appear to have limited experience with 2+ years of experience. How would you approach learning it?
+- You appear to have limited experience with Computer Vision. How would you approach learning it?
+- You appear to have limited experience with Chatbots. How would you approach learning it?
+- You appear to have limited experience with Robotics. How would you approach learning it?
 
 ### General Questions:
 - Describe your most complex project.
@@ -40,36 +42,32 @@
 
 ---
 
-## 2. Cv Mhd Faraz (6)
-**Score:** 40/100
-**Recommendation:** ❌ NO-HIRE
+## 2. Anubhav Full Resume
+**Score:** 70/100
+**Recommendation:** 🤔 MAYBE
 
-**Reasoning:** The candidate lacks experience in key areas such as Machine Learning, Deep Learning, NLP, and TensorFlow. Although they have a strong foundation in Data Structures and Algorithms and are proficient in Python, their experience is mostly in front-end development.
+**Reasoning:** The candidate has a strong background in AI and ML, with experience in building production-grade AI systems and publishing research. However, they lack experience in Computer Vision and have only 1+ year of industry experience, falling short of the 5-year requirement.
 
 **✅ Strengths:**
-- Python
-- strong foundation in Data Structures and Algorithms
-- experience with front-end development
+- Artificial Intelligence
+- Deep Learning
+- Neuro-linguistic Programming (NLP)
+- Machine Learning (ML)
 
 **⚠️ Gaps:**
-- Machine Learning
-- Deep Learning
-- NLP
-- TensorFlow
-- experience in Cloud Environments
-- less than 2 years of experience
+- Computer Vision
+- 5 years of experience
 
-## Interview Questions for Cv Mhd Faraz (6)
+## Interview Questions for Anubhav Full Resume
 
 ### Technical Questions:
-- Can you describe your experience with Machine Learning?
+- Can you describe your experience with Artificial Intelligence?
 - Can you describe your experience with Deep Learning?
-- Can you describe your experience with Python?
+- Can you describe your experience with Neuro-linguistic Programming (NLP)?
 
 ### Gap-Bridging Questions:
-- You appear to have limited experience with Machine Learning. How would you approach learning it?
-- You appear to have limited experience with Deep Learning. How would you approach learning it?
-- You appear to have limited experience with NLP. How would you approach learning it?
+- You appear to have limited experience with Computer Vision. How would you approach learning it?
+- You appear to have limited experience with 5 years of experience. How would you approach learning it?
 
 ### General Questions:
 - Describe your most complex project.
