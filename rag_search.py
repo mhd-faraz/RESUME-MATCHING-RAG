@@ -16,8 +16,8 @@ COLLECTION_NAME = "resumes"
 # ─────────────────────────────────────────
 
 def get_chroma_client():
-    """Get or create ChromaDB client."""
-    client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
+    """Get or create ChromaDB client (ephemeral for Cloud compatibility)."""
+    client = chromadb.EphemeralClient()
     return client
 
 
