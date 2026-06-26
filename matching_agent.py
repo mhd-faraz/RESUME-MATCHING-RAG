@@ -214,14 +214,14 @@ def generate_report_node(state: AgentState) -> AgentState:
 
     report = "\n".join(lines)
     state["report"]         = report
-    state["workflow_stage"] = "human_feedback"
+    state["workflow_stage"] = "collect_feedback"
     save_report(report, "matching_report.txt")
     print("   ✅ Report generated!")
     return state
 
 
 # ─────────────────────────────────────────
-# NODE 6: HUMAN FEEDBACK
+# NODE 6: COLLECT FEEDBACK
 # ─────────────────────────────────────────
 
 def human_feedback_node(state: AgentState) -> AgentState:
@@ -270,7 +270,7 @@ def build_agent():
     graph.add_node("search_resumes",       search_resumes_node)
     graph.add_node("rank_candidates",      rank_candidates_node)
     graph.add_node("generate_report",      generate_report_node)
-    graph.add_node("human_feedback",       human_feedback_node)
+    graph.add_node("collect_feedback",     human_feedback_node)
 
     graph.set_entry_point("parse_jd")
 
@@ -278,10 +278,10 @@ def build_agent():
     graph.add_edge("extract_requirements", "search_resumes")
     graph.add_edge("search_resumes",       "rank_candidates")
     graph.add_edge("rank_candidates",      "generate_report")
-    graph.add_edge("generate_report",      "human_feedback")
+    graph.add_edge("generate_report",      "collect_feedback")
 
     graph.add_conditional_edges(
-        "human_feedback",
+        "collect_feedback",
         route_after_feedback,
         {"rank_candidates": "rank_candidates", END: END}
     )
